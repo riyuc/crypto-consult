@@ -25,7 +25,7 @@ export async function submitConsultationForm(data: z.infer<typeof formSchema>) {
   try {
     // Send email to the user
     await resend.emails.send({
-      from: 'CryptoConsult <bongbang0101@yourcryptocompany.com>',
+      from: 'CryptoConsult <noreply@cryptoconsult.fyi>',
       to: email,
       subject: 'Your Consultation Request',
       html: `
@@ -39,8 +39,8 @@ export async function submitConsultationForm(data: z.infer<typeof formSchema>) {
 
     // Send email to the admin
     await resend.emails.send({
-      from: 'CryptoConsult <noreply@yourcryptocompany.com>',
-      to: 'bongbang0101@gmail.com',
+      from: 'CryptoConsult <noreply@cryptoconsult.fyi>',
+      to: 'ducng8985@gmail.com',
       subject: 'New Consultation Request',
       html: `
         <h1>New Consultation Request</h1>
